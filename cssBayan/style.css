@@ -42,16 +42,16 @@ body{
 .span1{
   position: absolute;
   display: block;
-  width: 30px;
-  height: 5px;
+  width: 2rem;
+  height: 0.3rem;
   background-color: black;
 }
 
 .span2{
   position: absolute;
   display: block;
-  width: 30px;
-  height: 5px;
+  width: 2rem;
+  height: 0.3rem;
   background-color: black;
   rotate: 90deg;
 
@@ -65,7 +65,7 @@ span {
   }
 
   .accordion_header{
-    padding-top: 20px;
+    padding-top: 2rem;
   }
 
   .accordion {
@@ -81,7 +81,7 @@ span {
     text-align: left;
     color: #222;
     margin: 0;
-    border-bottom: 1px solid black
+    border-bottom: 0.1rem solid black
   }
 
   .accordion_elem {
@@ -90,7 +90,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    border-bottom: 1px solid black;
+    border-bottom: 0.1rem solid black;
     transition: all 2s;
   }
 
