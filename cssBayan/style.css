@@ -169,7 +169,8 @@ span {
     }
   
 
-    .accordion_elem:active span {
+    .accordion_elem:active span,
+    .accordion_elem:hover span {
       color: blue;
     }
   }
