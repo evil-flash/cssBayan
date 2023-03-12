@@ -36,7 +36,25 @@ body{
 }
 
 .check{
-    
+  visibility: hidden;
+}
+
+.span1{
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: black;
+}
+
+.span2{
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  rotate: 90deg;
+
 }
 
 
@@ -116,7 +134,7 @@ span {
   }
   
   .toggle:checked ~ .trigger .check {
-    rotate: 90deg;
+    rotate: 45deg;
   }
 
 
@@ -139,7 +157,7 @@ span {
     }
   
     .accordion_elem:hover .check {
-      rotate: 90deg;
+      rotate: 45deg;
     }
   
     .accordion:hover .check {
@@ -150,7 +168,7 @@ span {
       opacity: 0.5;
     }
   
-    .accordion_elem:active .check,
+
     .accordion_elem:active span {
       color: blue;
     }
