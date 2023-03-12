@@ -35,28 +35,123 @@ body{
     font-family: 'Coming Soon', cursive;
 }
 
-.accordion{
-    display: flex;
-    flex-direction: column;
+.check{
+    
 }
 
-.accordion_elem{
+
+span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion_header{
+    padding-top: 20px;
+  }
+
+  .accordion {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 100vw;
+  }
+  .accordion_header {
+    text-align: left;
+    color: #222;
+    margin: 0;
+    border-bottom: 1px solid black
+  }
+
+  .accordion_elem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
     border-bottom: 1px solid black;
-    margin-bottom: 20px;
-}
+    transition: all 2s;
+  }
 
 .wrapper{
     width: 50vh;
     margin: 0 auto;
 }
 
-.image{
-    height: 0px;
-}
+.trigger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    color: black;
+    padding: 1rem 0 1rem 0;
+  }
+  
+  .toggle {
+    display: hidden;
+  }
+  
+  .image {
+    cursor: pointer;
+    clip: rect(0 0 0 0);
+    height: 0;
+    overflow: hidden;
+  }
 
-.accordion_elem:hover > .image{
-    height: 100%;
+  .toggle:checked ~ label .image {
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
     animation: show 1.2s ease 0s 1 normal forwards;
-}
+    margin: 1rem 0 0 0;
+    transition: 2s;
+  }
+  
+  .toggle:checked ~ .trigger {
+    color: blue;
+  }
+  
+  .toggle:checked ~ .trigger .check {
+    rotate: 90deg;
+  }
+
+
+
+
+  @media (hover: hover) {
+    i {
+      display: inline-block;
+      visibility: hidden;
+    }
+  
+    .accordion_elem:hover > label .image {
+      overflow: visible;
+      clip: auto;
+      width: auto;
+      height: 100%;
+      animation: show 1.2s ease 0s 1 normal forwards;
+      margin: 1rem 0 0 0;
+      transition: all 2s;
+    }
+  
+    .accordion_elem:hover .check {
+      rotate: 90deg;
+    }
+  
+    .accordion:hover .check {
+      visibility: visible;
+    }
+  
+    .accordion_elem:active > label {
+      opacity: 0.5;
+    }
+  
+    .accordion_elem:active .check,
+    .accordion_elem:active span {
+      color: blue;
+    }
+  }
